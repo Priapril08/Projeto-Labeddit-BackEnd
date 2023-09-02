@@ -7,8 +7,8 @@
 
 ## 🕵Sobre
 
-    Trata se de um projeto Integrador - Full Stack, desenvolvido durante o BootCamp Labenu, com intuito de conectar o usuário a uma rede social chamada LaBeddit, no qual cria-se o cadastro para que acesse e possa criar posts, curtí los e comentá los. Ele subdivide-se em *2 repositórios*, sendo esse BackEnd, e o outro FrontEnd.
-    Há API documentada (vide no final do ReaDMe) , no qual explica o passo a passo exemplificado de cada endpoint.
+    Trata se de um projeto Integrador - Full Stack, desenvolvido durante o BootCamp Labenu, com intuito de conectar o usuário a uma rede social chamada LaBeddit, no qual você cria o cadastro para que acesse e possa criar posts, curtí los e comentá los. Ele subdivide-se em *2 repositórios*, sendo esse BackEnd, e o outro FrontEnd.
+    A API documentada, no qual explica o passo a passo exemplificado de cada endpoint.
 
 ---
 
@@ -20,7 +20,7 @@
 
 ## 🧭Status do Projeto
 
-⏳ Feito _PORÉM... há algumas melhorias a serem feitas!_
+⏳ Feito _PORÉM... há algumas melhorias a serem feitas! Ainda em Evolução!..._
 
 ---
 
