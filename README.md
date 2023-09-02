@@ -85,7 +85,8 @@ Para esse projeto são modelados cinco entidades :
 
 ## 🔗Link para Acessar
 
-- **Link do Surge:** ~~COLOCAR AQUI O LINK DO SURGE~~
+- Link do render: https://pr-labeddit-backend-final.onrender.com
+- Link do FrontEnd: https://github.com/Priapril08/Front-End-Lab-Eddit 
 
 ---
 
