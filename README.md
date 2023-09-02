@@ -1,93 +1,85 @@
 # Projeto-Labeddit-BackEnd
 
-<h1 align="center">
-    Projeto Labeddit - BackEnd
-</h1>
-
 <h4 align="left">
-    Slogan do Projeto. Fazer um texto curto sobre o que é o projeto.
-</h4>
-
+    Projeto Labeddit Full Stack - BootCamp Labenu.
+    </h4>
 ---
 
 ## 🕵Sobre
 
-Escrever de forma sucinta sobre o que é o seu projeto. Por exemplo, se você está fazendo uma Pokedéx pode escrever : Aplicação com intuito de criar uma pokedéx, site onde você pode ver os detalhes dos pokemóns e montar a sua equipe.
+    Trata se de um projeto Integrador - Full Stack, desenvolvido durante o BootCamp Labenu, com intuito de conectar o usuário a uma rede social chamada LaBeddit, no qual cria-se o cadastro para que acesse e possa criar posts, curtí los e comentá los. Ele subdivide-se em *2 repositórios*, sendo esse BackEnd, e o outro FrontEnd.
+    Há API documentada (vide no final do ReaDMe) , no qual explica o passo a passo exemplificado de cada endpoint.
 
 ---
 
 ## 👩🏾Quem Faz
 
-- ~~COLOCAR O NOME DAS PESSOAS AUTORAS DO PROJETO~~
-- PESSOA 1
-- PESSOA 2
-- PESSOA 3
-
----
-
-## 🔠Conteúdos
-
-<!--ts-->
-
-- [Sobre](#sobre)
-- [Quem Faz](#-quem-faz)
-- [Status](#status)
-- [Objetivo do Projeto](#objetivo-do-projeto)
-- [Requisitos de Funcionalidade](#requisitos-de-funcionalidade)
-- [Concepção do Projeto](#concepcao-do-projeto)
-- [Link para Acessar](#link-para-acessar)
-- [Rodando o Projeto](#rodando-o-projeto)
-- [Sobre a Licença](#sobre-a-licença)
-<!--te-->
+- Projeto desenvolvido individualmente, by me _Priscila de Assumpção de Moraes_, sob supervisão dos instrutores Labenu.
 
 ---
 
 ## 🧭Status do Projeto
 
-~~COLOCAR AQUI O STATUS DO PROJETO. ALÉM DISSO, VOCÊ PODE COLOCAR QUAL PARTE VOCÊ ESTÁ DESENVOLVENDO (ESTILIZAÇÃO, RESPONSIVIDADE, ETC...)~~
-
-- ⏳ Fazendo
-- 📥 Testando
-- ⌛ Feito
+⏳ Feito _PORÉM... há algumas melhorias a serem feitas!_
 
 ---
 
 ## 🎯Objetivo do Projeto
 
-Este é um projeto de Back-end | Front-end | Full-Stack , desenvolvido no bootcamp da Labenu, cujo o principal objetivo é estudar e compreender : ~~COLOCAR AQUI QUAIS SÃO OS CONCEITOS E TECNOLOGIAS QUE VOCÊ ESTAVA FOCADO EM ESTUDAR, AO REALIZAR ESSE PROJETO~~.
+Este é um projeto BackEnd, desenvolvido no bootcamp da Labenu, cujo o principal objetivo é estudar, conhecer, absorver, errar e aprender (TUDO JUNTO!!):
 
-~~EXEMPLO:~~
-
-- Este é um projeto de Back-end , desenvolvido no bootcamp da Labenu, cujo o principal objetivo é estudar e compreender : Diferença entre banco de dados relacionais e não relacionais ; MySQL ; Criação de Query.
+> NodeJS
+> Typescript
+> Express
+> SQL e SQLite
+> Knex
+> POO
+> Arquitetura em camadas
+> Geração de UUID
+> Geração de hashes
+> Autenticação e autorização
+> Roteamento
+> Postman - (API documentada)
 
 ## ☑️Requisitos de Funcionalidade
 
-- [x] Funcionalidade 1
-- [ ] Funcionalidade 2
-- [ ] Funcionalidade 3
-- [ ] Funcionalidade 4
+- Documentação Postman de todos os endpoints (exemplificados) => https://documenter.getpostman.com/view/27687742/2s9Y5ctg6p:
 
-Além das funcionalidades, aqui você pode por Prints e gifs do seu projeto, como ele funciona.
+* USERS:
+
+- [x] POST - SIGNUP => Utilizado para cadastrar os users, e devolve um token jwt;
+- [x] POST - LOGIN => Utilizado para logar, e devolve um token jwt;
+- [x] GET (acessa todos os users) => Requer o token e apenas o role ADMIN, tem acesso.
+
+* POSTS:
+
+- [x] POST (cria um post) => Requer o token jwt gerado no signup ou login;
+- [x] GET (acessa todos os posts) => Requer o token, porém apenas o user role ADMIN, tem acesso;
+- [x] GET (acessa os posts pelo Id) => Requer o token, porém apenas o user role ADMIN, tem acesso;
+- [x] PUT (edita o post) => Requer o token, sendo que apenas quem criou o post poderá editá-lo;
+- [x] DELETE (deleta o post) => Requer o token, sendo que ADMIN é o único que poderá deletar o post.
+
+* LIKES_DISLIKES:
+
+- [x] LIKE_DISLIKE => Em um único endpoint funciona para ambos. Requer token, quem cria não pode dar like e dislike ao mesmo tempo.
+
+* COMMENTS:
+
+- [x] POST (cria um comentário) => Requer o token jwt gerado no signup ou login.
 
 ---
 
 ## 💡Concepção do Projeto
 
-- **Wireframe do Projeto:** ~~COLOCAR AQUI O WIREFRAME "ESBOÇO" DO PROJETO~~
-- **Link do Figma:** ~~COLOCAR AQUI O LINK DO FIGMA | LINK DO ADOBE XD | LINK DO WIREFRAME (FRONT-END)~~
-- **Modelagem do Banco de Dados :** ~~COLOCAR AQUI OS DIAGRAMAS DE MODELAGEM DO BANCO DE DADOS E EXPLICAR UM POUCO SOBRE~~ .
+- [x] Modelagem do Banco de Dados: https://dbdiagram.io/d/64f29c0f02bd1c4a5ed59218
 
-EXEMPLO:
+Para esse projeto são modelados cinco entidades :
 
-Para esse projeto são modelados três entidades : **Estudante (STUDENT), Professor (TEACHER)** e **Turma(CLASS)**. Cada um com as seguintes caracteristicas :
-
-→ Estudante - id, nome, email, data de nascimento e os principais hobbies;
-
-→ Professor - id, nome, email, data de nascimento e todas as especialidades ;
-
-→ Classe - id, nome, data de início, data de término, lista de professores responsáveis, uma lista de alunos e módulo atual em que a turma está.
-
-![Untitled](https://user-images.githubusercontent.com/52434685/120907206-16eb8700-c636-11eb-936f-d5212a4c5a36.png)
+→ Users - id, name, email, password, role e created_at;
+→ Posts - id, creator_id, content, comments, likes, dislikes, created_at e update_at;
+→ Likes_dislikes - user_id, post_id e like;
+→ comments_posts: id, creator_id, content, likes, dislikes, created_at, updated_at, post_id;
+→ likes_dislikes_comments: user_id, comments_id, like;
 
 ---
 
@@ -99,16 +91,18 @@ Para esse projeto são modelados três entidades : **Estudante (STUDENT), Profes
 
 ## 🛰Rodando o Projeto
 
-~~EXPLICAR AQUI O PASSO A PASSO PARA CONSEGUIR RODAR E ACESSAR O PROJETO.~~
-
-Para Rodar o projeto, siga as seguintes etapas :
-
-- COLOCAR A ETAPA 1
-- COLOCAR A ETAPA 2
-- COLOCAR A ETAPA 3
+→ npm run dev: conecta o banco de dados, mantém o servidor localhost:3003 atualizado automaticamente, em caso de alterações.
 
 ---
 
-## 📝Sobre a Licença
+### Bibliotecas e Framework
 
-Este projeto esta sobe a licença [MIT](./LICENSE).
+> bcryptjs,
+> cors,
+> dotenv",
+> express,
+> jsonwebtoken,
+> knex,
+> sqlite3,
+> uuid,
+> zod
